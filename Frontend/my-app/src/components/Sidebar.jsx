@@ -9,7 +9,7 @@ function Sidebar() {
               <li className="p-9">TOPICS</li>
               <li className="p-9">REGION</li> 
               <li className="p-9">PESTc</li>
-              <li className="p-9">SOURCE</li>
+              <li className="p-9">SOUsdsdRCE</li>
               <li className="p-9">SWOT</li>
               <li className="p-9">COUNTRY</li>
               <li className="p-9">CITY</li>
