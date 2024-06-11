@@ -7,8 +7,9 @@ import AuthUser from "./Router/Authuser.js"
 const app = express();
 
  
-
-app.get("/Auth", AuthUser);
+// Middleware to parse JSON bodies
+app.use(express.json());
+app.use("/Auth", AuthUser);
 
 
 app.listen(process.env.PORT, () => {
