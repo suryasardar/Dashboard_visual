@@ -1,20 +1,35 @@
 import React from "react";
+import { FaArrowDown } from "react-icons/fa";
+import { useState } from "react";
 
 function Sidebar() {
-  return (
-    <div className="flex flex-col mx-3 ">
-          <label for="cars" className="ml-8">DASHBOARD</label>
-          <ul className=" m-3 p-3 hover:bg-light-white rounded-md mt-2">
-              <li className="p-9">SECTOR</li>
-              <li className="p-9">TOPICS</li>
-              <li className="p-9">REGION</li> 
-              <li className="p-9">PESTc</li>
-              <li className="p-9">SOUsdsdRCE</li>
-              <li className="p-9">SWOT</li>
-              <li className="p-9">COUNTRY</li>
-              <li className="p-9">CITY</li>
+    const [isDropdownVisible, setDropdownVisible] = useState(false);
 
-          </ul>
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
+  return (
+    <div className="flex flex-col relative ">
+          <div className=" flex justify-between border-solid border-yellow-400 px-5 py-2 rounded cursor-pointer font-bold w-[200px]"
+          onClick={toggleDropdown} >
+              DASHBOARD
+              <FaArrowDown />
+          </div>
+          <div>
+              
+           {isDropdownVisible && (
+               <ul className="m-3 pr-8 rounded-md mt-2 cursor-pointer absolute bg-white shadow-lg">
+          <li className="p-3 hover:bg-gray-200">SECTOR</li>
+          <li className="p-3 hover:bg-gray-200">TOPICS</li>
+          <li className="p-3 hover:bg-gray-200">REGION</li>
+          <li className="p-3 hover:bg-gray-200">PESTc</li>
+          <li className="p-3 hover:bg-gray-200">SOURCE</li>
+          <li className="p-3 hover:bg-gray-200">SWOT</li>
+          <li className="p-3 hover:bg-gray-200">COUNTRY</li>
+          <li className="p-3 hover:bg-gray-200">CITY</li>
+        </ul>
+      )}
+    </div>
     </div>
   );
 }
