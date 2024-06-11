@@ -92,7 +92,7 @@ function Login() {
               <p class="text-sm !mt-10 text-center">
                 Don't have an account{" "}
                 <a
-                  href="javascript:void(0);"
+                  href="/signup"
                   class="text-blue-600 hover:underline ml-1 whitespace-nowrap"
                 >
                   Register here
