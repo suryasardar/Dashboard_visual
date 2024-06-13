@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowDown } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
     const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -19,14 +20,14 @@ function Sidebar() {
               
            {isDropdownVisible && (
                <ul className="m-3 pr-8 rounded-md mt-2 cursor-pointer absolute bg-white shadow-lg">
-          <li className="p-3 hover:bg-gray-200">SECTOR</li>
-          <li className="p-3 hover:bg-gray-200">TOPICS</li>
-          <li className="p-3 hover:bg-gray-200">REGION</li>
-          <li className="p-3 hover:bg-gray-200">PESTc</li>
-          <li className="p-3 hover:bg-gray-200">SOURCE</li>
-          <li className="p-3 hover:bg-gray-200">SWOT</li>
-          <li className="p-3 hover:bg-gray-200">COUNTRY</li>
-          <li className="p-3 hover:bg-gray-200">CITY</li>
+          <Link className="p-3 hover:bg-gray-200" to={'/sector'}>SECTOR</Link>
+          <Link className="p-3 hover:bg-gray-200" to={'/topic'}>TOPICS</Link>
+          <Link className="p-3 hover:bg-gray-200" to={'/region'}>REGION</Link>
+          <Link className="p-3 hover:bg-gray-200" to={'/pest'}>PEST</Link>
+          <Link className="p-3 hover:bg-gray-200" to={'/source'}>SOURCE</Link>
+          <Link className="p-3 hover:bg-gray-200" to={'/swot'}>SWOT</Link>
+          <Link className="p-3 hover:bg-gray-200" to={'/country'} >COUNTRY</Link>
+          <Link className="p-3 hover:bg-gray-200" to={'/city'}>CITY</Link>
         </ul>
       )}
     </div>
